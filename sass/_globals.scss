@@ -151,6 +151,11 @@ a{
     &:focus{
         outline:none;
     }
+    &:hover{
+        i{
+             @include animation('arrow-move .6s 1');
+        }
+    }
 }
 
 
@@ -308,7 +313,6 @@ header{
         font-size:20px;
         line-height:50px;
         text-transform:uppercase;
-        //box-shadow:-2px 2px 6px 0 rgba(0,0,0,0.35);
         i{
             font-size:14px;
             margin-left:6px;
@@ -343,7 +347,7 @@ footer{
     .container{
         max-width:1280px;
         padding:90px 0;
-        background:$dark_blue;
+        background:$primary;
 
     }
     .social-menu{
@@ -421,7 +425,7 @@ footer{
     position:relative;
     width:100%;
     height:620px;
-    background:$dark_blue;
+    background:$primary;
     overflow:hidden;
     #home-hero-copy{
         position:relative;
@@ -486,8 +490,8 @@ footer{
         position:absolute;
         top:0;left:0;
         width:100%;
-        @include opacity(0.5);
-        filter:grayscale(100%);
+        @include opacity(0.8);
+        filter:grayscale(35%);
         -webkit-backface-visibility: none;
         @include transition(all 0.6s $easeOutExpo);
         &.hide{
@@ -640,7 +644,21 @@ footer{
     }
 }
 
-.home-values, .home-about{
+.home-about{
+    background:$primary;
+    padding:0 0 0 0;
+    //border-top:1px solid #ddd;
+    .col-1-2{
+        //padding:40px 40px 40px 0;
+        &:first-child{
+            padding-right:0;
+        }
+    }
+    img{
+        display:block;
+    }
+}
+.home-values{
     background:$primary;
     padding:90px 0 0 0;
     //border-top:1px solid #ddd;
@@ -701,6 +719,7 @@ footer{
 }
 
 .programs{
+    padding:90px 0 0 0;
     //background:white;
     //padding:0 60px 60px 60px;
     .col-1-3{
@@ -717,7 +736,7 @@ footer{
     }
     .programs-copy{
         padding:0 40px;
-        height:400px;
+        height:300px;
         text-align:center;
         color:$primary;
         border:1px solid #ddd;
