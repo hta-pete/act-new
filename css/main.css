@@ -603,7 +603,7 @@ footer .copyright span {
 .home-hero {
   position: relative;
   width: 100%;
-  height: 620px;
+  height: 600px;
   background: #182443;
   overflow: hidden;
 }
@@ -919,6 +919,8 @@ footer .copyright span {
 }
 .programs .col-1-3 {
   background: white;
+  overflow: hidden;
+  border-radius: 5px;
 }
 .programs .col-1-3 img {
   display: block;
@@ -932,14 +934,14 @@ footer .copyright span {
 }
 .programs .programs-copy {
   padding: 0 40px;
-  height: 280px;
+  height: 250px;
   text-align: center;
   color: #182443;
   border: 1px solid #ddd;
 }
 .programs .programs-copy h3 {
-  font-size: 30px;
-  line-height: 35px;
+  font-size: 28px;
+  line-height: 33px;
   text-transform: uppercase;
 }
 .programs .programs-copy h4 {
