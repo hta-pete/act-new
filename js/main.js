@@ -130,6 +130,20 @@ $(function(){
 
     }
     animateText();
+
+
+    // Primary nav sub menu animation
+    $('.has-sub-menu--js').on('click', function(){
+
+      var sub_menu = $(this);
+
+      sub_menu.siblings().find('.sub-menu--js').slideUp('fast', function(){
+
+        sub_menu.find('.sub-menu--js').slideToggle('fast');
+
+      });
+
+    });
     
 
 });

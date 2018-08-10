@@ -19,27 +19,45 @@
 
 <body> 
 	
-	<header>
-		<div class="container clearfix">
-			<a href="" class="logo-header"><img src="img/act-logo.png" height="90"></a>
-			<nav class="primary-menu-left">
-				<ul>
-					<li><a href="">Drivers <i class="fa fa-chevron-down"></i></a></li>
-					<li><a href="">Company <i class="fa fa-chevron-down"></i></a></li>
-				</ul>
-			</nav>
-			<nav class="primary-menu-right">
-				<ul>
-					<li><a href="">Job Board</a></li>
-					<li><a href="">News</a></li>
-					<li><a href="">Contact Us</a></li>
-				</ul>
-			</nav>
-			<ul class="secondary-menu">
-				<li>800-555-5555</li>
-				<li><i class="fa fa-search"></i> Search</li>
-			</ul>
-			<a href="apply-now.html" class="header-apply">Apply Now <i class="fa fa-chevron-right"></i></a>
+	<header class="site-header site-header--js">
+		<div class="container">
+			<div class="container container--small">
+				<div class="row">
+					<div class="site-header__logo"><a href=""><img src="img/act-logo.png" height="90"></a></div>
+					<nav class="site-header__nav site-header__nav-primary">
+						<ul>
+							<li class="has-sub-menu has-sub-menu--js">Drivers <i class="fa fa-chevron-down"></i>
+                                <ul class="sub-menu sub-menu--js">
+                                    <li><a href="">Company Drivers</a></li>
+                                    <li><a href="lease-purchase.html">Lease Purchase</a></li>
+                                    <li><a href="owner-operators.html">Owner Operators</a></li>
+                                    <li><a href="">Traction Program</a></li> 
+                                    <li><a href="">Re-Activate</a></li> 
+                                    <li><a href="">Driver Testimonials</a></li> 
+                                </ul>
+                            </li>
+							<li class="has-sub-menu has-sub-menu--js">About ACT <i class="fa fa-chevron-down"></i>
+                                <ul class="sub-menu sub-menu--js">
+                                    <li><a href="">Our Story</a></li>
+                                    <li><a href="">Our Core Values</a></li>
+                                    <li><a href="">Inside ACT Plaza</a></li>
+                                    <li><a href="">Latest News</a></li>
+                                </ul>
+                            </li>
+                            <li>Job Board</li>
+						</ul>
+					</nav>	
+					<nav class="site-header__nav site-header__nav-secondary">
+						<ul>
+                            <li><i class="fa fa-comment"></i> Chat</li>
+							<li><i class="fa fa-phone"></i> 888-428-5228</li>
+						</ul>
+					</nav>	
+				</div>
+                <div class="site-header__apply">
+                    <a href="" class="apply-btn">Apply Now</a>
+                </div>
+			</div>
 		</div>
 	</header>
 
@@ -52,7 +70,7 @@
 					<h2></h2>
 				    <span class="underline"></span>	
 				</div>
-				<div class="play-btn"><i class="fa fa-play"></i></div>
+				<!-- <div class="play-btn"><i class="fa fa-play"></i></div> -->
 			</div>
 			<video autoplay muted loop id="video" class="img-fs">
 			    <source src="video/act_short.mp4" type="video/mp4">  
@@ -96,6 +114,8 @@
 	    		</div>
 	    	</div>
 	    </section>
+
+	    <!--
 	  
 	    <section class="home-values">
 	    	<div class="container clearfix flex-center-v">
@@ -113,12 +133,16 @@
 	    	</div>
 	    </section>
 
+	-->
+
 	    <div class="large-quote">
 	    	<div class="container">
 	    		<h3>"ACT HAS INTEGRITY. THEY DO WHAT’S RIGHT, EVEN WHEN NO ONE IS WATCHING."</h3>
 	    		<p>CHRIS PICKERT — ACT OWNER OPERATOR</p>
 	    	</div>
 	    </div>
+
+	    <!--
 
 	    <section class="home-about">
 	    	<div class="container clearfix flex-center-v">
@@ -135,6 +159,8 @@
 	    		</div>
 	    	</div>
 	    </section>
+
+	-->
 
 	    
 
