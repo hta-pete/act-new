@@ -104,7 +104,7 @@ $(function(){
               return 100 + 30 * i;
             }
           });
-
+          /*
           var underline = anime.timeline()
             .add({
                 targets: '#home-hero-copy .underline',
@@ -124,6 +124,7 @@ $(function(){
                 duration: 600,
                 offset: 4400,
           });
+          */
           
 
         count++;
@@ -144,6 +145,35 @@ $(function(){
       });
 
     });
+
+
+
+    //Slick slider
+    $('.programs-slider').slick({
+          infinite:true,
+          dots:false,
+          slidesToShow:3,
+          slidesToScroll:1,
+          //centerMode: true,
+          autoplay:true,
+          autoplaySpeed: 6000,
+          speed: 500,
+          pauseOnHover:false,
+          prevArrow: false,
+          nextArrow: $('.slider-next-btn')
+    });
+
+    $('.programs-slider').on('afterChange', resetSlideStuffProgress);
+
+    function resetSlideStuffProgress(){
+
+        var nextBtn     = $('.slider-next-btn'),  
+            newNextBtn  = nextBtn.clone(true);
+                   
+        nextBtn.before(newNextBtn);        
+        nextBtn.remove();
+
+    };
     
 
 });

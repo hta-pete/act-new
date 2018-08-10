@@ -86,15 +86,17 @@ TYPOGRAPHY
 ––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4 {
   font-family: "Oswald";
+  text-transform: uppercase;
 }
 
 h2 {
-  letter-spacing: -2px;
+  letter-spacing: 2px;
   font-weight: 500;
 }
 
 h3 {
   font-weight: 500;
+  letter-spacing: 1px;
 }
 
 h4 {
@@ -114,7 +116,6 @@ a {
   position: relative;
   max-width: 450px;
   padding: 0 0;
-  color: white;
 }
 .tout-copy h3 {
   font-size: 45px;
@@ -151,7 +152,7 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-  min-width: 250px;
+  min-width: 200px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 }
 .primary-btn i {
@@ -681,7 +682,7 @@ footer .copyright span {
   width: 100%;
   opacity: 0.8;
   filter: alpha(opacity=80);
-  filter: grayscale(35%);
+  filter: grayscale(25%);
   -webkit-backface-visibility: none;
   -webkit-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -845,11 +846,11 @@ footer .copyright span {
 }
 
 .home-about {
-  background: #182443;
+  background: white;
   padding: 0 0 0 0;
 }
 .home-about .col-1-2:first-child {
-  padding-right: 0;
+  padding: 60px;
 }
 .home-about img {
   display: block;
@@ -915,12 +916,21 @@ footer .copyright span {
 }
 
 .programs {
-  padding: 90px 0 0 0;
+  position: relative;
+  padding: 0 0 0 0;
+  margin-top: 50px;
+  text-align: center;
+}
+.programs h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 30px;
 }
 .programs .col-1-3 {
   background: white;
   overflow: hidden;
-  border-radius: 5px;
+  margin: 0 5px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
 .programs .col-1-3 img {
   display: block;
@@ -937,7 +947,6 @@ footer .copyright span {
   height: 250px;
   text-align: center;
   color: #182443;
-  border: 1px solid #ddd;
 }
 .programs .programs-copy h3 {
   font-size: 28px;
@@ -960,6 +969,58 @@ footer .copyright span {
   margin-top: 20px;
 }
 
+.programs-slider {
+  position: relative;
+  overflow: hidden;
+}
+.programs-slider .slick-slide:focus {
+  outline: none;
+}
+
+.slider-next-btn {
+  position: absolute;
+  cursor: pointer;
+  z-index: 20;
+  top: 50%;
+  margin-top: -20px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+}
+.slider-next-btn svg {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+.slider-next-btn i {
+  font-size: 10px;
+  color: white;
+}
+
+.progress {
+  transform: rotate(-90deg);
+}
+
+.progress__value {
+  stroke-dasharray: 238.761;
+  stroke-dashoffset: 238.761;
+}
+
+.slider-progress {
+  animation: progress 6s forwards;
+}
+
+@keyframes progress {
+  from {
+    stroke-dashoffset: 238.761;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .apply-form {
   background: #ebebeb;
   text-align: center;
