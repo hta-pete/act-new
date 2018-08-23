@@ -20,7 +20,7 @@ $(function(){
 
         var imagewidth    = $(this).width();
         var imageheight   = $(this).height();
-        var browserwidth  = $('#main').width();
+        var browserwidth  = $window.width();
         var browserheight = $('.home-hero').height();
      
         if ((browserheight/browserwidth) > ratio){
