@@ -104,29 +104,7 @@ $(function(){
               return 100 + 30 * i;
             }
           });
-          /*
-          var underline = anime.timeline()
-            .add({
-                targets: '#home-hero-copy .underline',
-                translateX: [800,0],
-                opacity: [0,1],
-                width: '120%',
-                easing: "easeOutExpo",
-                duration: 1000,
-                offset: 500,
-            })
-            .add({
-                targets: '#home-hero-copy .underline',
-                translateX: [0,-800],
-                width: '0',
-                opacity: [1,0],
-                easing: "easeInExpo",
-                duration: 600,
-                offset: 4400,
-          });
-          */
           
-
         count++;
 
     }
@@ -149,21 +127,21 @@ $(function(){
 
 
     //Slick slider
-    $('.programs-slider').slick({
+    $('.home-programs-slider').slick({
           infinite:true,
           dots:false,
           slidesToShow:3,
           slidesToScroll:1,
           //centerMode: true,
           autoplay:true,
-          autoplaySpeed: 6000,
+          autoplaySpeed: 8000,
           speed: 500,
           pauseOnHover:false,
           prevArrow: false,
           nextArrow: $('.slider-next-btn')
     });
 
-    $('.programs-slider').on('afterChange', resetSlideStuffProgress);
+    $('.home-programs-slider').on('afterChange', resetSlideStuffProgress);
 
     function resetSlideStuffProgress(){
 
@@ -174,6 +152,80 @@ $(function(){
         nextBtn.remove();
 
     };
+
+    
+    $('.flipping-drivers-slide:first-child').addClass('active');
+
+    // Animate video thumb group
+    $('.flipping-drivers-slider').on('mousemove', rotateCard);
+
+    function rotateCard(e){
+
+      var offsetLeft = $(this).offset().left;
+      var offsetTop  = $(this).offset().top;
+      var mouseX     = offsetLeft + $(this).width() / 2;
+      var mouseY     = offsetTop + $(this).height() / 2;
+      var rotate_X;
+      var rotate_Y;
+      
+      rotate_X = e.pageX - mouseX;
+      rotate_Y = e.pageY - mouseY;
+
+      $(this).find('img, h4').css('transform', 'rotateX(' + -rotate_Y*0.02 + 'deg) rotateY(' + rotate_X*0.02 + 'deg) translateY(-15px)');
+    
+
+    }
+
+    $('.flipping-drivers-slider').on('mouseleave', function(){
+      
+      $(this).find('img, h4').css('transform', 'rotateX(' + 0 + 'deg) rotateY(' + 0 + 'deg) translateY(0)');
+      
+    });
+
+    
+
+
+    $('.flipping-drivers-slider-next-btn').on('click', function(){
+
+        $('.flipping-drivers-slide').removeClass('active');
+
+
+
+    });
+
+
+    var driverImages = ['img/james.jpg', 'img/john.jpg'];
+    var driverNames  = ['James', 'John'];
+
+    var flipDrivers = function(){
+
+        var current = 0;
+        var len     = driverImages.length;
+
+        return function(){
+            var direction = 1;
+            if (current >= len) current = 0;
+
+            $('.flipping-drivers-slide').removeClass('active');
+
+            setTimeout(function(){
+
+                $('.flipping-drivers-slide img').attr('src', driverImages[current]);
+                $('.flipping-drivers-slide h4').text('Meet ' + driverNames[current]);
+                $('.flipping-drivers-slide').addClass('active');
+
+                current += direction;
+
+            }, 500);
+            
+
+            
+        }
+    }();
+
+    $('.flipping-drivers-slider-next-btn').on('click', flipDrivers);
+
+
     
 
 });

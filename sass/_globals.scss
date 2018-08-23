@@ -231,7 +231,7 @@ html,body{
 .container{
 	position:relative;
 	width:100%;
-	max-width:1024px;
+	max-width:1100px;
 	margin:0 auto;
 }
 section{
@@ -561,7 +561,7 @@ footer{
         top:0;left:0;
         width:100%;
         height:100%;
-        background:$primary;
+        background:#181818;
         overflow:hidden;
         video{
             z-index:0;
@@ -597,8 +597,8 @@ footer{
 }
 
 
-.home-about{
-    padding:120px 0;
+.home-driver-stories{
+    padding:200px 0;
     .bgtext{
         position:absolute;
         width:100%;
@@ -611,6 +611,7 @@ footer{
     .col-1-2{
         position:relative;
         &:first-child{
+            z-index:50;
             h4{
                 position:absolute;
                 width:100%;
@@ -624,29 +625,64 @@ footer{
         }
     }
     h4{
-        font-size:50px;
-        line-height:50px;
+        position:absolute;
+        width:100%;
+        text-align:center;
+        z-index:4;
+        bottom:50px;
+        font-size:70px;
+        line-height:70px;
         letter-spacing:3px;
         color:white;
     }
     h3{
-        font-size:80px;
-        line-height:80px;
+        font-size:100px;
+        line-height:100px;
         letter-spacing:3px;
         color:$primary;
     }
     p{
-        color:rgba(0,0,0,0.6);
+        color:rgba(0,0,0,0.5);
+    }
+    .primary-btn{
+        margin-top:60px;
     }
     img{
         position:relative;
         z-index:2;
         display:block;
+        box-shadow:0 20px 60px 0 rgba(0,0,0,0.4);
+    }
+}
+
+.flipping-drivers{
+    perspective: 800px;
+}
+.flipping-drivers-slider{
+    position:relative;
+
+    
+    
+}
+.flipping-drivers-slide{
+    position:relative;
+    perspective: 800px;
+    @include transform(rotateY(20deg));
+    @include transition(all 1s $easeOutExpo);
+    @include opacity(0);
+    img, h4{
+        will-change:transform;
+        transform-style : preserve-3d;
+        @include transition(transform 1.5s $easeOutExpo);
+    }
+    &.active{
+        @include transform(rotateY(0) rotateX(0));
+        @include opacity(1);
     }
 }
 
 
-.programs{
+.home-programs{
     position:relative;
     padding:0;
     text-align:center;
@@ -661,8 +697,8 @@ footer{
         img{
             display:block;
             width:100%;
-            @include opacity(0.5);
-            filter:grayscale(100%);
+            //@include opacity(0.9);
+            //filter:grayscale(100%);
         }
     }
     .program-img{
@@ -670,7 +706,7 @@ footer{
     }
     .programs-copy{
         padding:0 0;
-        padding:0 20px;
+        padding:0 40px;
         height:240px;
         text-align:center;
         color:$dark_blue;
@@ -692,13 +728,13 @@ footer{
             margin-top:20px;
         }
         .primary-btn{
-            margin-top:20px;
+            margin-top:30px;
         }
     }
 }
 
 
-.programs-slider{
+.home-programs-slider{
     position:relative;
     .slick-slide{
         &:focus{
@@ -711,42 +747,35 @@ footer{
     cursor:pointer;
     z-index:10;
     top:50%;
-    margin-top:-20px;
+    margin-top:-30px;
     right:0;
-    width:60px;
-    height:60px;
+    width:56px;
+    height:56px;
     background:white;
     box-shadow:0 2px 4px 0 rgba(0,0,0,0.2);
     border-radius:60px;
-    svg{
-        position:absolute;
-        width:60px;
-        height:60px;
-    }
     i{
         font-size:12px;
         color:$primary;
     }
 }
-.progress {
-    transform: rotate(-90deg);
-}
-
-.progress__value {
-    stroke-dasharray: 376.991;
-    stroke-dashoffset: 376.991;
-}
-.slider-progress{
-    animation: progress 6s forwards;
-}
-
-@keyframes progress {
-    from {
-        stroke-dashoffset: 376.991;
-    }
-    to {
-        stroke-dashoffset: 0;
+.flipping-drivers-slider-next-btn{
+    position:absolute;
+    cursor:pointer;
+    z-index:10;
+    top:50%;
+    margin-top:-30px;
+    right:-30px;
+    width:56px;
+    height:56px;
+    background:white;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,0.2);
+    border-radius:60px;
+    i{
+        font-size:12px;
+        color:$primary;
     }
 }
+
 
 
