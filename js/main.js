@@ -132,9 +132,6 @@ $(function(){
           dots:false,
           slidesToShow:3,
           slidesToScroll:1,
-          //centerMode: true,
-          autoplay:true,
-          autoplaySpeed: 8000,
           speed: 500,
           pauseOnHover:false,
           prevArrow: false,
@@ -171,14 +168,16 @@ $(function(){
       rotate_X = e.pageX - mouseX;
       rotate_Y = e.pageY - mouseY;
 
-      $(this).find('img, h4').css('transform', 'rotateX(' + -rotate_Y*0.02 + 'deg) rotateY(' + rotate_X*0.02 + 'deg) translateY(-15px)');
+      $(this).find('img').css('transform', 'rotateX(' + -rotate_Y*0.02 + 'deg) rotateY(' + rotate_X*0.02 + 'deg) translateY(-15px) translateZ(0)');
+      $(this).find('h4').css('transform', 'rotateX(' + -rotate_Y*0.02 + 'deg) rotateY(' + rotate_X*0.02 + 'deg) translateY(-30px) translateZ(40px)');
     
 
     }
 
     $('.flipping-drivers-slider').on('mouseleave', function(){
       
-      $(this).find('img, h4').css('transform', 'rotateX(' + 0 + 'deg) rotateY(' + 0 + 'deg) translateY(0)');
+      $(this).find('img').css('transform', 'rotateX(' + 0 + 'deg) rotateY(' + 0 + 'deg) translateY(0) translateZ(0)');
+      $(this).find('h4').css('transform', 'rotateX(' + 0 + 'deg) rotateY(' + 0 + 'deg) translateY(0) translateZ(0)');
       
     });
 
@@ -199,7 +198,7 @@ $(function(){
 
     var flipDrivers = function(){
 
-        var current = 0;
+        var current = 1;
         var len     = driverImages.length;
 
         return function(){

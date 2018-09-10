@@ -223,16 +223,23 @@ html,body{
 #main{
     position:relative;
 	width:100%;
-    max-width:1280px;
+    //max-width:1280px;
     margin:0 auto;
     padding-top:100px;
-    background:#f6f6f6;
+    //background:#f6f6f6;
+    background:#f6f6f6 url(../img/texture-1.jpg) no-repeat center top;
 }
 .container{
 	position:relative;
 	width:100%;
 	max-width:1100px;
 	margin:0 auto;
+}
+.container-large{
+    position:relative;
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
 }
 section{
     
@@ -287,7 +294,7 @@ section{
 
 ––––––––––––––––––––––––––––––––––––––––––– */
 header.site-header{
-    z-index:20;
+    z-index:100;
     position:fixed;
     top:0;
     left:0;
@@ -297,14 +304,14 @@ header.site-header{
     .container{
         position:relative;
         height:100%;
-        max-width:1280px;
+        max-width:1400px;
         background:$color-blue;
     }
 }
 .site-header--js{
     @include transition(transform 0.8s $easeOutExpo);
     &.hide{
-        @include transform(translateY(-100px));
+        @include transform(translateY(-90px));
     }
 }
 .site-header__logo{
@@ -379,7 +386,7 @@ header.site-header{
 }
 .site-header__apply{
     position:absolute;
-    top:100px;
+    top:90px;
     right:0;
 }
 
@@ -498,7 +505,7 @@ footer{
 .home-hero{
     position:relative;
     width:100%;
-    height:90%;
+    height:95%;
     #home-hero-copy{
         position:relative;
         z-index:2;
@@ -569,7 +576,7 @@ footer{
             position:absolute;
             top:0;left:0;
             width:100%;
-            @include opacity(0.6);
+            @include opacity(0.75);
             -webkit-backface-visibility: none;
             //@include transition(all 0.6s $easeOutExpo);
             &.hide{
@@ -599,6 +606,7 @@ footer{
 
 .home-driver-stories{
     padding:200px 0;
+    background:url(../img/texture-2.jpg) no-repeat center bottom;
     .bgtext{
         position:absolute;
         width:100%;
@@ -626,9 +634,9 @@ footer{
     }
     h4{
         position:absolute;
+        z-index:6;
         width:100%;
         text-align:center;
-        z-index:4;
         bottom:50px;
         font-size:70px;
         line-height:70px;
@@ -651,7 +659,7 @@ footer{
         position:relative;
         z-index:2;
         display:block;
-        box-shadow:0 20px 60px 0 rgba(0,0,0,0.4);
+        box-shadow:0 30px 90px 0 rgba(0,0,0,0.4);
     }
 }
 
@@ -659,10 +667,7 @@ footer{
     perspective: 800px;
 }
 .flipping-drivers-slider{
-    position:relative;
-
-    
-    
+    position:relative; 
 }
 .flipping-drivers-slide{
     position:relative;
@@ -672,7 +677,6 @@ footer{
     @include opacity(0);
     img, h4{
         will-change:transform;
-        transform-style : preserve-3d;
         @include transition(transform 1.5s $easeOutExpo);
     }
     &.active{
@@ -687,8 +691,7 @@ footer{
     padding:0;
     text-align:center;
     h2{
-        color:white;
-        font-size:28px;
+        font-size:40px;
         margin-bottom:30px;
     }
     .col-1-3{
@@ -697,8 +700,6 @@ footer{
         img{
             display:block;
             width:100%;
-            //@include opacity(0.9);
-            //filter:grayscale(100%);
         }
     }
     .program-img{
@@ -716,11 +717,11 @@ footer{
             text-transform:uppercase;
         }
         h4{
-            font-size:18px;
+            font-size:16px;
             line-height:24px;
             text-transform:uppercase;
             margin-bottom:0px;
-            color:$orange;
+            color:rgba(0,0,0,0.5);
         }
         p{
             font-size:15px;
@@ -748,11 +749,11 @@ footer{
     z-index:10;
     top:50%;
     margin-top:-30px;
-    right:0;
+    right:-80px;
     width:56px;
     height:56px;
     background:white;
-    box-shadow:0 2px 4px 0 rgba(0,0,0,0.2);
+    box-shadow:0 6px 20px 0 rgba(0,0,0,0.2);
     border-radius:60px;
     i{
         font-size:12px;
@@ -769,7 +770,7 @@ footer{
     width:56px;
     height:56px;
     background:white;
-    box-shadow:0 2px 4px 0 rgba(0,0,0,0.2);
+    box-shadow:0 6px 20px 0 rgba(0,0,0,0.2);
     border-radius:60px;
     i{
         font-size:12px;

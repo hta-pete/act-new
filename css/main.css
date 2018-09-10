@@ -253,16 +253,22 @@ html, body {
 #main {
   position: relative;
   width: 100%;
-  max-width: 1280px;
   margin: 0 auto;
   padding-top: 100px;
-  background: #f6f6f6;
+  background: #f6f6f6 url(../img/texture-1.jpg) no-repeat center top;
 }
 
 .container {
   position: relative;
   width: 100%;
   max-width: 1100px;
+  margin: 0 auto;
+}
+
+.container-large {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -317,18 +323,18 @@ html, body {
 
 ––––––––––––––––––––––––––––––––––––––––––– */
 header.site-header {
-  z-index: 20;
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 90px;
   background: #1c2541;
 }
 header.site-header .container {
   position: relative;
   height: 100%;
-  max-width: 1280px;
+  max-width: 1400px;
   background: #1c2541;
 }
 
@@ -340,11 +346,11 @@ header.site-header .container {
   transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .site-header--js.hide {
-  -moz-transform: translateY(-100px);
-  -o-transform: translateY(-100px);
-  -ms-transform: translateY(-100px);
-  -webkit-transform: translateY(-100px);
-  transform: translateY(-100px);
+  -moz-transform: translateY(-90px);
+  -o-transform: translateY(-90px);
+  -ms-transform: translateY(-90px);
+  -webkit-transform: translateY(-90px);
+  transform: translateY(-90px);
 }
 
 .site-header__logo {
@@ -357,7 +363,7 @@ header.site-header .container {
 .site-header__nav li {
   display: inline-block;
   font-size: 12px;
-  line-height: 100px;
+  line-height: 90px;
   font-weight: 600;
   text-transform: uppercase;
   color: white;
@@ -425,7 +431,7 @@ header.site-header .container {
 
 .site-header__apply {
   position: absolute;
-  top: 100px;
+  top: 90px;
   right: 0;
 }
 
@@ -679,7 +685,7 @@ footer .copyright span {
 .home-hero {
   position: relative;
   width: 100%;
-  height: 90%;
+  height: 95%;
 }
 .home-hero #home-hero-copy {
   position: relative;
@@ -763,8 +769,8 @@ footer .copyright span {
   top: 0;
   left: 0;
   width: 100%;
-  opacity: 0.6;
-  filter: alpha(opacity=60);
+  opacity: 0.75;
+  filter: alpha(opacity=75);
   -webkit-backface-visibility: none;
 }
 .home-hero .video-wrap video.hide {
@@ -794,6 +800,7 @@ footer .copyright span {
 
 .home-driver-stories {
   padding: 200px 0;
+  background: url(../img/texture-2.jpg) no-repeat center bottom;
 }
 .home-driver-stories .bgtext {
   position: absolute;
@@ -822,9 +829,9 @@ footer .copyright span {
 }
 .home-driver-stories h4 {
   position: absolute;
+  z-index: 6;
   width: 100%;
   text-align: center;
-  z-index: 4;
   bottom: 50px;
   font-size: 70px;
   line-height: 70px;
@@ -847,7 +854,7 @@ footer .copyright span {
   position: relative;
   z-index: 2;
   display: block;
-  box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 30px 90px 0 rgba(0, 0, 0, 0.4);
 }
 
 .flipping-drivers {
@@ -876,7 +883,6 @@ footer .copyright span {
 }
 .flipping-drivers-slide img, .flipping-drivers-slide h4 {
   will-change: transform;
-  transform-style: preserve-3d;
   -webkit-transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
   -ms-transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -899,8 +905,7 @@ footer .copyright span {
   text-align: center;
 }
 .home-programs h2 {
-  color: white;
-  font-size: 28px;
+  font-size: 40px;
   margin-bottom: 30px;
 }
 .home-programs .col-1-3 {
@@ -927,11 +932,11 @@ footer .copyright span {
   text-transform: uppercase;
 }
 .home-programs .programs-copy h4 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
   margin-bottom: 0px;
-  color: #f49347;
+  color: rgba(0, 0, 0, 0.5);
 }
 .home-programs .programs-copy p {
   font-size: 15px;
@@ -955,11 +960,11 @@ footer .copyright span {
   z-index: 10;
   top: 50%;
   margin-top: -30px;
-  right: 0;
+  right: -80px;
   width: 56px;
   height: 56px;
   background: white;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   border-radius: 60px;
 }
 .slider-next-btn i {
@@ -977,7 +982,7 @@ footer .copyright span {
   width: 56px;
   height: 56px;
   background: white;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   border-radius: 60px;
 }
 .flipping-drivers-slider-next-btn i {
