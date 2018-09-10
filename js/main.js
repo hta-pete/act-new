@@ -132,6 +132,12 @@ $(function(){
           dots:false,
           slidesToShow:3,
           slidesToScroll:1,
+<<<<<<< HEAD
+=======
+          //centerMode: true,
+          autoplay:false,
+          //autoplaySpeed: 8000,
+>>>>>>> 2a22db0f5f4ff3915bcb5f3139cc62cd6643b0e8
           speed: 500,
           pauseOnHover:false,
           prevArrow: false,
@@ -168,16 +174,25 @@ $(function(){
       rotate_X = e.pageX - mouseX;
       rotate_Y = e.pageY - mouseY;
 
+<<<<<<< HEAD
       $(this).find('img').css('transform', 'rotateX(' + -rotate_Y*0.02 + 'deg) rotateY(' + rotate_X*0.02 + 'deg) translateY(-15px) translateZ(0)');
       $(this).find('h4').css('transform', 'rotateX(' + -rotate_Y*0.02 + 'deg) rotateY(' + rotate_X*0.02 + 'deg) translateY(-30px) translateZ(40px)');
+=======
+      $(this).find('img').css('transform', 'rotateX(' + -rotate_Y*0.02 + 'deg) rotateY(' + rotate_X*0.02 + 'deg) translateY(-15px) translateZ(10px)');
+      $(this).find('h4').css('transform', 'rotateX(' + -rotate_Y*0.02 + 'deg) rotateY(' + rotate_X*0.02 + 'deg) translateY(-15px) translateZ(40px)');
+>>>>>>> 2a22db0f5f4ff3915bcb5f3139cc62cd6643b0e8
     
 
     }
 
     $('.flipping-drivers-slider').on('mouseleave', function(){
       
+<<<<<<< HEAD
       $(this).find('img').css('transform', 'rotateX(' + 0 + 'deg) rotateY(' + 0 + 'deg) translateY(0) translateZ(0)');
       $(this).find('h4').css('transform', 'rotateX(' + 0 + 'deg) rotateY(' + 0 + 'deg) translateY(0) translateZ(0)');
+=======
+      $(this).find('img, h4').css('transform', 'rotateX(' + 0 + 'deg) rotateY(' + 0 + 'deg) translateY(0) translateZ(0)');
+>>>>>>> 2a22db0f5f4ff3915bcb5f3139cc62cd6643b0e8
       
     });
 
